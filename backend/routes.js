@@ -8,5 +8,6 @@ console.log("Controller Check:", documentController.uploadDocument);
 console.log("Upload Middleware Check:", upload.single);
 
 router.post("/documents", upload.single("file"), documentController.uploadDocument);
+router.put("/documents/:id", upload.single("file"), documentController.updateDocument);
 
 module.exports = router;
