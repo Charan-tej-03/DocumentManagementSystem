@@ -22,10 +22,10 @@ This is a web application project, where we can upload, search, and manage docum
 5. npm start
 
 In a new terminal:
+
 6. cd frontend
 7. npm install
 8. ng serve
-
 9. We can access the web-application through http://localhost:4200/
 
 
