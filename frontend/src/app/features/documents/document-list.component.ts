@@ -17,17 +17,29 @@ import { RouterModule } from '@angular/router';
   template: `
   <div class="container mt-4">
 
-    <div class="d-flex justify-content-between align-items-center mb-3">
-      <h2>Documents</h2>
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <h2>Documents</h2>
+
+    <div class="d-flex gap-2">
 
       <!-- Upload Button -->
       <button
         *ngIf="canEdit()"
         class="btn btn-success"
         (click)="toggleUploadForm()">
-        + Upload New Document
+        + Upload
       </button>
+
+      <!-- Logout Button -->
+      <button
+        class="btn btn-danger"
+        (click)="logout()">
+        Logout
+      </button>
+
     </div>
+  </div>
+
 
     <!-- Upload Form -->
     <div *ngIf="showUploadForm" class="card p-3 mb-4 shadow-sm">
@@ -170,5 +182,9 @@ export class DocumentListComponent implements OnInit {
   canEdit(): boolean {
     const role = this.auth.getRole();
     return role === 'admin' || role === 'editor';
+  }
+
+  logout() {
+    this.auth.logout();
   }
 }
