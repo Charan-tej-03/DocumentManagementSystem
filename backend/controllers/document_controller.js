@@ -61,7 +61,7 @@ exports.updateDocument = async (req, res) => {
 };
 
 exports.getDocuments = async(req, res) => {
-  const search = req.query;
+  const search = req.query.search;
 
   const query = search
     ? {title: {$regex: search, $options: "i"}}
