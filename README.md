@@ -15,7 +15,7 @@ This is a web application project, where we can upload, search, and manage docum
 
 ## Installation and setup
 
-1. git clone 
+1. git clone https://github.com/Charan-tej-03/DocumentManagementSystem.git
 2. cd DocumentManagementSystem
 3. cd backend
 4. npm install
